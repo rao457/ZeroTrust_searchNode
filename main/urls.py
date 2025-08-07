@@ -6,5 +6,6 @@ router = DefaultRouter()
 router.register(r'books', BookView)
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('', HomeView.as_view(), name="home"),
+    path('api/', include(router.urls)),
 ]
