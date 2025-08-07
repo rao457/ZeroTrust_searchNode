@@ -1,5 +1,7 @@
 services:
   web:
+    env_file:
+      - .env
     build: .
     container_name: stackBridge
     command: python manage.py runserver 0.0.0.0:8000
